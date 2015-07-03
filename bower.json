@@ -1,6 +1,6 @@
 {
   "name": "angular-venn",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "authors": [
     "Matt Carter <m@ttcarter.com>"
   ],
@@ -13,5 +13,9 @@
     "graph"
   ],
   "license": "MIT",
-  "homepage": "http://momsfriendlydevco.github.io/ng-mfdc"
+  "homepage": "http://momsfriendlydevco.github.io/ng-mfdc",
+  "dependencies": {
+    "d3": "~3.5.5",
+    "venn.js": "*"
+  }
 }
