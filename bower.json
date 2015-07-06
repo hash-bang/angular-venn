@@ -15,6 +15,7 @@
   "license": "MIT",
   "homepage": "http://momsfriendlydevco.github.io/ng-mfdc",
   "dependencies": {
+    "angular": "~1.4.1",
     "d3": "~3.5.5",
     "venn.js": "*"
   }
