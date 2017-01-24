@@ -8,7 +8,7 @@ angular.module('angular-venn', [])
 			vennMap: '=?'
 		},
 		restrict: 'AE',
-		controller: function($scope, $element) {
+		controller: ['$scope', '$element', function($scope, $element) {
 			$scope.chartD3 = venn.VennDiagram();
 
 			/**
@@ -36,7 +36,7 @@ angular.module('angular-venn', [])
 					throw new Error('Venn data is invalid');
 				} else if ($scope.vennKey || $scope.vennMap) {
 					// Use key method or map method{{{
-					var sets = {};
+					sets = {};
 					var seenKeys = {};
 					// Iterate over each item and compute the initial set from data {{{
 					$scope.venn.forEach(function(i) {
@@ -62,7 +62,7 @@ angular.module('angular-venn', [])
 					});
 					// }}}
 					// Convert set object into array {{{
-					sets = Object.keys(sets).map(function(k) { return sets[k] });
+					sets = Object.keys(sets).map(function(k) { return sets[k]; });
 					// }}}
 					// }}}
 				} else {
@@ -73,8 +73,6 @@ angular.module('angular-venn', [])
 
 				d3.select($element[0]).datum(sets).call($scope.chartD3);
 			}, true);
-		},
-		link: function($scope, elem, attr, ctrl) {
-		}
-	}
+		}]
+	};
 });
