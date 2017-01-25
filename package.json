@@ -1,6 +1,6 @@
 {
   "name": "angular-venn",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Venn diagrams for AngularJS",
   "main": "angular-venn.js",
   "repository": {
